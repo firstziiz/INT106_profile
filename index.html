@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Kanisorn Sutham</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <!-- Home Scene -->
+    <div id="scene">
+      <div class="content">
+        <h2>Information Technology</h2>
+        <h1>KANISORN SUTHAM</h1>
+        <button onclick="togglePopup()" class="btn">Profile</button>
+      </div>
+      <div class="line"></div>
+    </div>
+
+    <!-- Popup Section -->
+    <div id="popup">
+      <!-- Information -->
+      <h1 class="information">Kanisorn Sutham
+        <span>1996.10.10 . I'm 19 years old . CNX</span>
+      </h1>
+      <!-- i like ... -->
+      <div class="love">
+        <p>I like to ..</p>
+        <p class="guitar">Play Guitar</p>
+        <p class="books">Reading Books</p>
+        <p class="place">Travel to Natural Place</p>
+        <p>so much.</p>
+      </div>
+      <!-- my fav ... -->
+      <div class="favorite">
+        <p>list of my favorite thing.</p>
+        <p class="color">My favorite color is <span>RED</span></p>
+        <p class="architechture">I love Wonderful Architecture</p>
+        <p class="around">Around the world.</p>
+        <p class="everywhere">I love to travel Everywhere.</p>
+      </div>
+      <!-- Last word.. -->
+      <div class="last">
+        <p>I LOVE TO SEE THE WORLD.</p>
+      </div>
+    </div>
+
+    <!-- Pure Javascript -->
+    <script>
+      var scene = document.getElementById('scene');
+      var pop = document.getElementById('popup');
+
+      // Toggle Class for Popup
+      function togglePopup(){
+        if( scene.className == ''){
+          scene.className += 'active';
+          pop.className += 'active';
+        }
+        else
+        {
+          scene.className = '';
+          pop.className = '';
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+html,body{
+  font-family: 'Playfair Display', serif;
+  color: white;
+  overflow: hidden;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,p {
+  font-weight: normal;
+  margin: 0;
+}
+
+/*
+   =================
+     Content Style
+   =================
+ */
+#scene{
+  background: url(bg_webtech.jpg) no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+#scene.active .content{
+  margin-left: -10%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  margin-bottom: 46px;
+  transition: margin-left 2s;
+
+}
+
+.content h1{
+  font-size: 90px;
+  letter-spacing: 7px;
+  margin: 0 0 10px 0;
+}
+
+.content h2{
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin: 0
+}
+
+.content .btn {
+  background: none;
+  border: 1px solid white;
+  padding: 16px 62px;
+  margin-bottom: 60px;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 24px;
+  letter-spacing: 7px;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.content .btn:hover{
+  color: black;
+  background-color: white;
+}
+.content .btn:focus{
+  outline: none;
+}
+.line {
+  position: absolute;
+  bottom: 45px;
+  height: 1px;
+  width: 120%;
+  border-top: 1px solid white;
+}
+
+/*
+   ===============
+     Popup Style
+   ===============
+ */
+
+#popup {
+  height: 100vh;
+  width: 40%;
+  float: right;
+  background: rgba(0,0,0,.8);
+  padding: 0 20px;
+  z-index: 100;
+  text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  right: -50%;
+  transition: right 2s;
+}
+
+#popup.active {
+  right: 0;
+}
+
+#popup .information {
+  font-size: 64px;
+  margin-bottom: 50px;
+}
+
+#popup .information span {
+  display: block;
+  font-family: 'Roboto', serif;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 2px
+}
+#popup .love{
+  margin-bottom: 50px;
+  font-family: 'Roboto', serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+#popup .love .guitar{
+  font-size: 36px;
+  font-family: 'Playfair Display', serif;
+}
+#popup .love .books{
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+}
+#popup .love .place{
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+}
+
+#popup .favorite {
+  margin-bottom: 50px;
+  font-family: 'Roboto', serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#popup .favorite .color {
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+}
+#popup .favorite .color span { font-size: 40px;}
+
+#popup .favorite .architechture {
+  font-size: 36px;
+  font-family: 'Playfair Display', serif;
+}
+#popup .favorite .everywhere {
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+}
+
+#popup .last {
+  font-size: 42px;
+  font-family: 'Playfair Display', serif;
+}
+
+/*
+   =============
+     Keyframes
+   =============
+ */
+
+@keyframes fadeIn {
+    0%, 50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeInHeader {
+    0%,20%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeInBtn {
+    0%, 20% {
+      opacity: 0;
+    }
+    70%{
+      opacity: 1;
+      color: black;
+      background-color: white;
+    }
+    100%{
+      color: white;
+      background: none;
+    }
+}
+
+/*
+   =============
+     Animation
+   =============
+ */
+
+.content h1{
+  animation: fadeInHeader 1.5s linear;
+}
+
+.content h2{
+  animation: fadeIn 3s linear;
+}
+
+.content .btn{
+  animation: fadeInBtn 4s linear;
+}
+#scene .line{
+  animation: fadeIn 2s linear;
+}
+#popup.active .information {
+  animation: fadeIn 1.5s linear;
+}
+#popup.active .love {
+  animation: fadeIn 3s linear;
+}
+#popup.active .favorite {
+  animation: fadeIn 4.5s linear;
+}
+#popup.active .last {
+  animation: fadeIn 6s linear;
+}
